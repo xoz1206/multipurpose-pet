@@ -1,0 +1,50 @@
+참고사이트 http://makeshare.org/bbs/board.php?bo_table=raspberrypi&wr_id=490
+
+-------------------------- EV3에서 할 것-------------------------------
+1. Wireless and Networks -> Tethering -> bluetooth와 Gadget 체크
+2. Wireless and Networks -> Visible 체크 -> Start Scan 활성화
+3. rapsberry pi에서 진행
+
+
+
+---------------------------raspberry pi에서 할 것-----------------------
+1. raspberry pi를 킨다. (raspbian)
+
+------패키지 업데이트 -----
+2. sudo apt-get update
+   sudo apt-get upgrade
+
+------블루투스 패키지 설치------
+3.  sudo apt-get install bluetooth blueman bluez
+
+------라즈베리파이 재부팅------
+4.  sudo reboot
+
+------블루투스 관련 파이썬 패키지 설치-----
+5.  sudo apt-get install python-bluetooth
+
+------블루투스 페어링하기------
+6. sudo bluetoothctl
+  [bluetooth]#power on
+  [bluetooth]#agent on
+  [bluetooth]#discoverable on
+  [bluetooth]#pairable on
+  [bluetooth]#scan on
+
+------- device 연결하기 --------
+내가 원하는 device 이름이 나오면 그 앞에 적힌 주소 XX:XX:XX:XX:XX:XX가 있다.
+pair xx:xx:xx:xx:xx:xx
+=> ev3에 연결할 것인지 확인 버튼이 뜬다. accept
+
+
+
+
+---------------------------------연결이 된후 ssh 로 접속하기 -----------------------
+연결이 된 후 왼쪽 상단에 적힌 ip 주소 A 기억
+raspberry pi 터미널에서 ssh robot@A를 적는다. ( ex. ssh robot@192.168.0.1 )
+password : maker
+
+====> 접속 완료
+python code 작성.
+
+장장 6시간....걸렸습니다..후,,,
