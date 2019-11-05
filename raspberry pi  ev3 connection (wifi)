@@ -16,8 +16,7 @@ ev3의 .py 코드를 실행시킬때 변수를 받는 것에 대해 좀더 생�
     2. txt file을 읽어 값을 받아온 후 motor를 제어한다.
     
     
-    
-    
+   외부 parameter 받아오는 방법에 대한 사이트 : https://soooprmx.com/archives/2885
     
     
     
