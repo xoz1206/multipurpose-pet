@@ -1,0 +1,29 @@
+raspberry pi 와 bluetooth를 이용해 연결을 시도했으나 여러 복합적인 문제로 인해 잘 안됨.
+따라서 차선책으로 wifi를 사용하기로 함.
+같은 wifi에 접속하고 ssh를 통해 raspberry pi와 ev3 간의 통신을 하기로 결정.
+
+ev3의 .py 코드를 실행시킬때 변수를 받는 것에 대해 좀더 생각을 해보았다.
+어떻게 raspberry pi camera를 통해 추출된 정보를 ev3의 python code에 입력으로 넣을 것인가.
+이것에 대한 해결책으로 다음과 같은 과정을 거치는 것으로 생각해보았다.
+
+
+------------raspberry pi shell script--------------
+    1. raspberry pi camera를 통해 공을 인식한다. 
+    2. 공의 위치와 크기 정보가 담긴 txt file을 갱신한다.
+    
+------------Ev3 shell script---------------
+    1. raspberry pi 에 저장되어있는 txt file을 복사해온다.
+    2. txt file을 읽어 값을 받아온 후 motor를 제어한다.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+ 
