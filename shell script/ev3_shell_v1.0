@@ -1,0 +1,12 @@
+cp test.txt test_B.txt
+while [ 1 ]
+do
+    echo "--------------------"
+    if diff test_B.txt test.txt
+    then 
+        echo "same"
+    else
+        cat test.txt
+        cp test.txt test_B.txt
+     fi
+done
