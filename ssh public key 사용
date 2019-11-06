@@ -1,0 +1,10 @@
+ssh public key를 사용해 비밀번호 없이 로그인했습니다.
+참고 사이트 : https://opentutorials.org/module/432/3742
+
+1. ssh-keygen -t rsa
+2. enter # default 경로에 저장.
+3. enter # 입력없이 자동으로 로그인하기 위한 것.
+4. enter # 한번더 입력
+5. ls -al ~/.ssh/  # .pub 파일 확인
+6. 원격 저장소에서 scp $HOME/.ssh/id_rsa.pub egoing@egoing.net:id_rsa.pub 입력
+7. ssh robot@10.27.7.14 치면 로그인 없이 접속 됨.
