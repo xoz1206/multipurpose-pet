@@ -1,0 +1,12 @@
+저번주에 세명( 정영교, 정휘수, 인수민 )이서 만들어오기로 했던 ev3 motor control python code에 대해 
+keyboardInterrupt( ctrl + c )가 발생해도 모터가 종료되지 않는 문제점과 뒤로 움직이지 않는 문제점 등을 찾아내었고
+이에 대해 다음주까지 보완해서 최종 motor control code를 작성해오기로 했습니다.
+
+팀장 (이재민)은 raspberry pi와 ev3의 연결 간편화(public key 설정으로 비밀번호 입력 없어도 되게 함)를 진행했으며,
+raspberry pi camera를 사용하기 위해 raspberry pi에 opnecv library를 설치하고 예제코드 실행으로 정상설치되었는지
+확인했습니다.
+
+다음주 까지 이재민, 정영교 두명은 추가적으로 perception 파트에 대한 코드를 작성해오기로 했으며,
+정휘수, 인수민 두명은 tracking 파트에 대한 코드를 작성해오기로 했습니다.
+
+또한 본격적으로 git pull, push, merge를 진행하기로 했습니다.
