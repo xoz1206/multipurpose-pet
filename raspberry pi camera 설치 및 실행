@@ -1,0 +1,4 @@
+참고사이트 : https://www.pyimagesearch.com/2015/03/30/accessing-the-raspberry-pi-camera-with-opencv-and-python/
+
+raspberry pi camera를 사용하기위해 위 사이트를 통해 picamera.array를 설치하고 
+제대로 설치가 되었는지 예제 코드를 돌려봤습니다.
