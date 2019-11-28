@@ -1,0 +1,17 @@
+2019.11.26(화)를 기점으로 multipurpose Pet project를 종료했습니다.
+
+최종적으로 작품의 동작과정은 다음과 같습니다.
+raspberry pi에서 ./camera.sh , ./transfer.sh를 실행시키고, 
+ev3dev에서 python3 motor.py를 실행시킵니다.
+
+camera.sh : shell script에는 python3 red_ball_tracing_camera_version.py가 적혀있습니다. 
+            python3 red_ball_tracing_camera_version.py로 python 코드를 실행시키면 raspberry pi camera를 통해 
+            빨간 공 인식 알고리즘을 수행하게 됩니다. 빨간 공 인식 알고리즘을 통해서 최종적으로 얻은 정보(x, y, radius)를 
+            red_ball_info.txt 파일에 쓰게됩니다.
+
+transfer.sh : sftp 통신을 통해 반복적으로 ev3dev에 red_ball_info.txt 파일을 보내는 역할을 합니다.
+               sftp 통신에 대한 자세한 방법과 shell script에서 sftp를 사용하는 방법은 github.com/xoz1206/multipurpose-pet에 올려두었습니다.
+
+motor.py : 먼저 transfer.sh를 통해서 ev3dev으로 계속 전송받은 red_ball_info.txt를 읽고 검출된 빨간 공의 x, y, radius 값을 받습니다.
+           그 다음, 읽어온 x, y, radius 값을 가지고 어떤 동작을 취해야 하는지 판단을 합니다. 그리고 ev3 motor를 제어하는 코드를 통해
+           검출된 빨간 공의 위치가 화면 상의 중앙에 올 수 있도록 모터를 적절히 움직입니다. 
